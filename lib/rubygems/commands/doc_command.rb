@@ -5,6 +5,8 @@ require 'launchy'
 
 class Gem::Commands::DocCommand < Gem::Command
 
+  RUBYDOC_URL = 'http://rubydoc.info/gems'
+
   def initialize
     defaults = {
       :version => Gem::Requirement.default,
@@ -55,6 +57,11 @@ in the current browser.
       unless spec
         alert_error "Could not find #{gem_name} #{options[:version]}"
         exit_code |= 1
+        next
+      end
+
+      if options[:remote]
+        Launchy.open("#{RUBYDOC_URL}/#{spec.name}/#{spec.version}")
         next
       end
 
