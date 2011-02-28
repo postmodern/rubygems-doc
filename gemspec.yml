@@ -12,7 +12,7 @@ has_yard: true
 
 dependencies:
   yard: ~> 0.6
-  launchy: ~> 0.3.7
+  launchy: ~> 0.4.0
 
 development_dependencies:
   ore-tasks: ~> 0.4

@@ -22,6 +22,9 @@ Generates documentation for specific Gems and view them in a browser.
 
 ## Requirements
 
+* [yard](http://yardoc.org/) ~> 0.6
+* [launchy](https://github.com/copiousfreetime/launchy) ~> 0.4.0
+
 ## Install
 
     $ gem install rubygems-doc
